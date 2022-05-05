@@ -1,4 +1,5 @@
 using BLL.Data;
+using Mapper;
 using BLL.Services.HashPasswordService;
 using BLL.Services.TokenService;
 using BLL.Services.UserService;
@@ -59,6 +60,8 @@ builder.Services.AddSwaggerGen(c =>
         }
      });
 });
+
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<Context>(options => options.UseNpgsql(connection));

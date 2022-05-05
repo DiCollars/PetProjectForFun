@@ -1,5 +1,5 @@
-﻿using BLL.DTO;
-using DAL.Repositories.UserRepository;
+﻿using DAL.Repositories.UserRepository;
+using Mapper.BLLDTO;
 
 namespace BLL.Services.HashPasswordService
 {

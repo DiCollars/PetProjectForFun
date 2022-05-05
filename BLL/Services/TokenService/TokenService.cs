@@ -1,5 +1,4 @@
 ﻿using BLL.Data;
-using BLL.DTO;
 using BLL.Services.HashPasswordService;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -37,7 +36,7 @@ namespace BLL.Services.TokenService
 
         private async Task<ClaimsIdentity> GetIdentity(string username, string password)
         {
-            BUserFull user = await _hashPasswordService.Logging(username, password);
+            var user = await _hashPasswordService.Logging(username, password);
 
             if (user != null)
             {

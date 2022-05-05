@@ -1,6 +1,6 @@
-﻿namespace PhotoManager.DTO
+﻿namespace Mapper.PALDTO
 {
-    public class RUserWithoutPassword
+    public class PUserWithoutPassword
     {
         public int Id { get; set; }
 

@@ -20,7 +20,15 @@ namespace DAL.Models
         [Required]
         public string ProfileName { get; set; }
 
+        [Required]
+        public string ProfilePhotoPath { get; set; }
+
+        [Required]
+        public string EmailAddress { get; set; }
+
         public bool IsPrivate { get; set; } = false;
+
+        public RegistrationRequest? RegistrationRequest { get; set; }
 
         /// <summary>
         /// Likes which he leave on publications

@@ -1,6 +1,6 @@
 ﻿using BLL.Services.TokenService;
+using Mapper.PALDTO;
 using Microsoft.AspNetCore.Mvc;
-using PhotoManager.DTO;
 
 namespace PhotoManager.Controllers
 {
@@ -16,7 +16,7 @@ namespace PhotoManager.Controllers
         }
 
         [HttpPost("get-token")]
-        public async Task<IActionResult> GetToken([FromBody] RUserShort userShort)
+        public async Task<IActionResult> GetToken([FromBody] PUserShort userShort)
         {
             try
             {

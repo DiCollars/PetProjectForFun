@@ -1,4 +1,4 @@
-﻿namespace BLL.DTO
+﻿namespace Mapper.BLLDTO
 {
     public class BUserFull
     {
@@ -11,5 +11,11 @@
         public string Role { get; set; }
 
         public string ProfileName { get; set; }
+
+        public string ProfilePhotoPath { get; set; }
+
+        public string EmailAddress { get; set; }
+
+        public bool IsPrivate { get; set; }
     }
 }

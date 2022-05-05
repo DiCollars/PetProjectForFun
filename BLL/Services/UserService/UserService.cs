@@ -1,7 +1,8 @@
-﻿using BLL.DTO;
+﻿using AutoMapper;
 using BLL.Services.HashPasswordService;
 using DAL.Models;
 using DAL.Repositories.UserRepository;
+using Mapper.BLLDTO;
 
 namespace BLL.Services.UserService
 {
@@ -9,24 +10,22 @@ namespace BLL.Services.UserService
     {
         private readonly IHashPasswordService _hashPasswordService;
         private readonly IUserRepository _userRepository;
+        private readonly IMapper _mapper;
 
-        public UserService(IUserRepository userRepository, IHashPasswordService hashPasswordService)
+        public UserService(IUserRepository userRepository
+            , IHashPasswordService hashPasswordService
+            , IMapper mapper
+            )
         {
             _userRepository = userRepository;
             _hashPasswordService = hashPasswordService;
+            _mapper = mapper;
         }
 
         public async Task Create(BUserFull user)
         {
             user.Password = _hashPasswordService.HashPassword(user.Password);
-            await _userRepository.Create(new User 
-            {
-                Id = user.Id,
-                Login = user.Login,
-                Role = user.Role,
-                Password = user.Password,
-                ProfileName = user.ProfileName
-            });
+            await _userRepository.Create(_mapper.Map<User>(user));
         }
 
         public async Task<IEnumerable<BUserFull>> GetAll(int skip, int take)

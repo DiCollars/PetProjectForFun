@@ -1,6 +1,6 @@
-﻿namespace PhotoManager.DTO
+﻿namespace Mapper.PALDTO
 {
-    public class RUserShort
+    public class PUserShort
     {
         public string Login { get; set; }
 

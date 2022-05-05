@@ -17,6 +17,7 @@ namespace DAL.Data
         public DbSet<Subscription> Subscription { get; set; }
         public DbSet<User> User { get; set; }
         public DbSet<SubscribeRequest> SubscribeRequest { get; set; }
+        public DbSet<RegistrationRequest> RegistrationRequests { get; set; }
 
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)

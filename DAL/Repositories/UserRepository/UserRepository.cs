@@ -17,8 +17,11 @@ namespace DAL.Repository.Repositories
 
         public async Task Create(User item)
         {
-            await _context.User.AddAsync(item);
-            await _context.SaveChangesAsync();
+            if (!_context.User.Any(u => u.Login == item.Login))
+            {
+                await _context.User.AddAsync(item);
+                await _context.SaveChangesAsync();
+            }
         }
 
         public async Task Delete(int id)

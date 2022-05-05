@@ -1,8 +1,9 @@
-﻿using BLL.DTO;
+﻿using AutoMapper;
 using BLL.Services.UserService;
+using Mapper.BLLDTO;
+using Mapper.PALDTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PhotoManager.DTO;
 
 namespace PhotoManager.Controllers
 {
@@ -11,31 +12,26 @@ namespace PhotoManager.Controllers
     public class UserController : Controller
     {
         private readonly IUserService _userService;
+        private readonly IMapper _mapper;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, IMapper mapper)
         {
             _userService = userService;
+            _mapper = mapper;
         }
 
         //[Authorize(Roles = "Admin")]
         [HttpPost("add-user")]
-        public async Task AddUser([FromBody] RUserFull user)
+        public async Task AddUser([FromBody] PUserFull user)
         {
-            await _userService.Create(new BUserFull 
-            { 
-                Id = user.Id, 
-                Login = user.Login, 
-                Role = user.Role, 
-                Password = user.Password,
-                ProfileName = user.ProfileName
-            });
+            await _userService.Create(_mapper.Map<BUserFull>(user));
         }
 
         [Authorize(Roles = "Admin, User")]
         [HttpGet("get-all-users")]
-        public async Task<List<RUserWithoutPassword>> GetUsers([FromQuery] int skip, [FromQuery] int take)
+        public async Task<List<PUserWithoutPassword>> GetUsers([FromQuery] int skip, [FromQuery] int take)
         {
-            return (await _userService.GetAll(skip, take)).Select(u => new RUserWithoutPassword()
+            return (await _userService.GetAll(skip, take)).Select(u => new PUserWithoutPassword()
             {
                 Id = u.Id,
                 Login = u.Login,

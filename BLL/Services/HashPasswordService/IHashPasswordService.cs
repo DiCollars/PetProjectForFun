@@ -1,4 +1,4 @@
-﻿using BLL.DTO;
+﻿using Mapper.BLLDTO;
 
 namespace BLL.Services.HashPasswordService
 {
