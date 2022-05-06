@@ -1,4 +1,4 @@
-﻿namespace Mapper.PALDTO
+﻿namespace Mapper.UserDTO.PALDTO
 {
     public class PUserShort
     {

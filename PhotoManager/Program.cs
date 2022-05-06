@@ -1,37 +1,43 @@
 using BLL.Data;
 using Mapper;
-using BLL.Services.HashPasswordService;
-using BLL.Services.TokenService;
-using BLL.Services.UserService;
-using DAL.Data;
-using DAL.Repositories.UserRepository;
-using DAL.Repository.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using PhotoManager.SwaggerObjects;
+using BLL.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
+
+string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddAppDBContext(connectionString);
+
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+builder.Services.AddRepositories();
+builder.Services.AddServices();
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddCors();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                  .AddJwtBearer(options =>
-                  {
-                      options.RequireHttpsMetadata = false;
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
 
-                      options.TokenValidationParameters = new TokenValidationParameters
-                      {
-                          ValidateIssuer = true,
-                          ValidIssuer = AuthOptions.ISSUER,
-                          ValidateAudience = true,
-                          ValidAudience = AuthOptions.AUDIENCE,
-                          ValidateLifetime = true,
-                          IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey(),
-                          ValidateIssuerSigningKey = true,
-                      };
-                  });
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = AuthOptions.ISSUER,
+            ValidateAudience = true,
+            ValidAudience = AuthOptions.AUDIENCE,
+            ValidateLifetime = true,
+            IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey(),
+            ValidateIssuerSigningKey = true,
+        };
+    });
 
 builder.Services.AddSwaggerGen(c =>
 {
@@ -60,20 +66,6 @@ builder.Services.AddSwaggerGen(c =>
         }
      });
 });
-
-builder.Services.AddAutoMapper(typeof(MappingProfile));
-
-string connection = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<Context>(options => options.UseNpgsql(connection));
-
-builder.Services.AddTransient<IUserRepository, UserRepository>();
-
-builder.Services.AddTransient<IUserService, UserService>();
-builder.Services.AddTransient<IHashPasswordService, HashPasswordService>();
-builder.Services.AddTransient<ITokenService, TokenService>();
-
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 

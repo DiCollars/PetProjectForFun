@@ -1,12 +1,6 @@
-C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.csproj.AssemblyReference.cache
-C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.AssemblyInfoInputs.cache
-C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.AssemblyInfo.cs
-C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.csproj.CoreCompileInputs.cache
-C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\appsettings.json
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\PhotoManager.exe
+C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\appsettings.json
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\PhotoManager.deps.json
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\PhotoManager.runtimeconfig.json
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\PhotoManager.dll
@@ -19,6 +13,7 @@ C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Microsoft.Data
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Microsoft.Identity.Client.dll
@@ -31,6 +26,7 @@ C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Microsoft.Open
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Npgsql.dll
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -57,9 +53,15 @@ C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\BLL.dll
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\DAL.dll
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Mapper.dll
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\BLL.pdb
-C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\DAL.pdb
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Mapper.pdb
+C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\DAL.pdb
+C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.csproj.AssemblyReference.cache
+C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.AssemblyInfoInputs.cache
+C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.AssemblyInfo.cs
+C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.csproj.CoreCompileInputs.cache
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\scopedcss\bundle\PhotoManager.styles.css
@@ -69,3 +71,4 @@ C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\refint\PhotoMa
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.pdb
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\PhotoManager.genruntimeconfig.cache
 C:\Users\dicol\Desktop\PhotoManager\PhotoManager\obj\Debug\net6.0\ref\PhotoManager.dll
+C:\Users\dicol\Desktop\PhotoManager\PhotoManager\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll

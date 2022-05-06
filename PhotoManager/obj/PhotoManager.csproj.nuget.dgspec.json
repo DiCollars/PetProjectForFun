@@ -127,9 +127,25 @@
               "target": "Package",
               "version": "[6.0.4, )"
             },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[6.0.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             }
           },
           "imports": [
@@ -245,9 +261,6 @@
             "projectReferences": {
               "C:\\Users\\dicol\\Desktop\\PhotoManager\\BLL\\BLL.csproj": {
                 "projectPath": "C:\\Users\\dicol\\Desktop\\PhotoManager\\BLL\\BLL.csproj"
-              },
-              "C:\\Users\\dicol\\Desktop\\PhotoManager\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\dicol\\Desktop\\PhotoManager\\DAL\\DAL.csproj"
               },
               "C:\\Users\\dicol\\Desktop\\PhotoManager\\Mapper\\Mapper.csproj": {
                 "projectPath": "C:\\Users\\dicol\\Desktop\\PhotoManager\\Mapper\\Mapper.csproj"

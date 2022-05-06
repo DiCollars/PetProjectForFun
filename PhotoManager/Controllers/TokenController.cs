@@ -1,5 +1,5 @@
 ﻿using BLL.Services.TokenService;
-using Mapper.PALDTO;
+using Mapper.UserDTO.PALDTO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PhotoManager.Controllers

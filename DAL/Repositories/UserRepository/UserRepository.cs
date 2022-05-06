@@ -8,9 +8,9 @@ namespace DAL.Repository.Repositories
     //TODO: Create exeptions or answer codes to comfirm Task operations
     public class UserRepository : IUserRepository
     {
-        private Context _context;
+        private Data.AppDBContext _context;
 
-        public UserRepository(Context context)
+        public UserRepository(Data.AppDBContext context)
         {
             _context = context;
         }

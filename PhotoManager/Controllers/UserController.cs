@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using BLL.Services.UserService;
-using Mapper.BLLDTO;
-using Mapper.PALDTO;
+using Mapper.UserDTO.BLLDTO;
+using Mapper.UserDTO.PALDTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,7 +20,7 @@ namespace PhotoManager.Controllers
             _mapper = mapper;
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost("add-user")]
         public async Task AddUser([FromBody] PUserFull user)
         {
@@ -31,12 +31,7 @@ namespace PhotoManager.Controllers
         [HttpGet("get-all-users")]
         public async Task<List<PUserWithoutPassword>> GetUsers([FromQuery] int skip, [FromQuery] int take)
         {
-            return (await _userService.GetAll(skip, take)).Select(u => new PUserWithoutPassword()
-            {
-                Id = u.Id,
-                Login = u.Login,
-                Role = u.Role
-            }).ToList();
+            return (await _userService.GetAll(skip, take)).Select(u => _mapper.Map<PUserWithoutPassword>(u)).ToList();
         }
 
         //[Authorize(Roles = "Admin")]

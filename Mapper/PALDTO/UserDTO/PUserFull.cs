@@ -1,6 +1,6 @@
-﻿namespace Mapper.BLLDTO
+﻿namespace Mapper.UserDTO.PALDTO
 {
-    public class BUserFull
+    public class PUserFull
     {
         public int Id { get; set; }
 

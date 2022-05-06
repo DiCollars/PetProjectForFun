@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{6D8A134B-FE6F-42F9-9FA2-FA2B34EADE6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mapper", "Mapper\Mapper.csproj", "{D8DEF983-7BFB-4481-8343-CA049D4A720B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mapper", "Mapper\Mapper.csproj", "{D8DEF983-7BFB-4481-8343-CA049D4A720B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

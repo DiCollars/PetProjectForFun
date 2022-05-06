@@ -2,7 +2,7 @@
 using BLL.Services.HashPasswordService;
 using DAL.Models;
 using DAL.Repositories.UserRepository;
-using Mapper.BLLDTO;
+using Mapper.UserDTO.BLLDTO;
 
 namespace BLL.Services.UserService
 {
@@ -30,19 +30,12 @@ namespace BLL.Services.UserService
 
         public async Task<IEnumerable<BUserFull>> GetAll(int skip, int take)
         {
-            //TODO: Add mapper for DTO
             if (skip == 0 && take == 0)
             {
                 take = int.MaxValue;
             }
 
-            return (await _userRepository.GetAll(skip, take)).Select(u => new BUserFull 
-            {
-                Id = u.Id, 
-                Login = u.Login, 
-                Password = u.Password,
-                Role = u.Role       
-            });
+            return (await _userRepository.GetAll(skip, take)).Select(u => _mapper.Map<BUserFull>(u));
         }
     }
 }

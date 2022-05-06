@@ -1,15 +1,20 @@
-﻿using DAL.Repositories.UserRepository;
-using Mapper.BLLDTO;
+﻿using AutoMapper;
+using DAL.Repositories.UserRepository;
+using Mapper.UserDTO.BLLDTO;
 
 namespace BLL.Services.HashPasswordService
 {
     public class HashPasswordService : IHashPasswordService
     {
         private readonly IUserRepository _userRepository;
+        private readonly IMapper _mapper;
 
-        public HashPasswordService(IUserRepository userRepository)
+        public HashPasswordService(
+              IUserRepository userRepository
+            , IMapper mapper)
         {
             _userRepository = userRepository;
+            _mapper = mapper;
         }
 
         public string HashPassword(string password)
@@ -30,7 +35,7 @@ namespace BLL.Services.HashPasswordService
 
             if (isValidPassword && user != null)
             {
-                return new BUserFull {  Id = user.Id, Login = user.Login, Password = user.Password, Role = user.Role };
+                return _mapper.Map<BUserFull>(user);
             }
             else
             {

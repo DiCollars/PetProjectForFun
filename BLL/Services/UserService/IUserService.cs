@@ -1,4 +1,4 @@
-﻿using Mapper.BLLDTO;
+﻿using Mapper.UserDTO.BLLDTO;
 
 namespace BLL.Services.UserService
 {
